@@ -38,7 +38,7 @@ async def nopm(client, message):
         old=msg.get(message.chat.id)
         if old:
             await client.delete_messages(message.chat.id, [old["msg"], old["s"]])
-        msg[message.chat.id]={"msg":m.updates[1].message.id, "s":message.message_id}
+        msg[message.chat.id]={"msg":m.updates[1].message.id, "s":message.id}
     except BotInlineDisabled:
             print(f"Inline Mode for @{USERNAME} is not enabled. Enable it from @Botfather to turn on PM Guard !")
             await message.reply_text(f"{REPLY_MESSAGE}\n\n<b>© Powered By : \n@AsmSafone | @AsmSupport 👑</b>")

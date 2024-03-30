@@ -292,7 +292,7 @@ class MusicPlayer(object):
         call = InputGroupCall(id=self.group_call.group_call.id, access_hash=self.group_call.group_call.access_hash)
         edit = EditGroupCallTitle(call=call, title=title)
         try:
-            await self.group_call.client.send(edit)
+            await self.group_call.client.invoke(edit)
         except Exception as e:
             print("Error Occured On Changing VC Title:", e)
             pass

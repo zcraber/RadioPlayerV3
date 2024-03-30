@@ -77,7 +77,7 @@ async def song(_, message: Message):
             #     return
 
             performer = f"[ꜱᴀꜰᴏɴᴇ ᴍᴜꜱɪᴄ]" 
-            thumb_name = f'thumb{message.message_id}.jpg'
+            thumb_name = f'thumb{message.id}.jpg'
             thumb = requests.get(thumbnail, allow_redirects=True)
             open(thumb_name, 'wb').write(thumb.content)
 
