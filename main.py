@@ -66,7 +66,7 @@ def stop_and_restart():
 bot.run(main())
 bot.start()
 print("\n\nRadio Player Bot Started, Join @AsmSafone!")
-bot.send(
+bot.invoke(
     SetBotCommands(
         scope=BotCommandScopeDefault(),
         lang_code="en",
